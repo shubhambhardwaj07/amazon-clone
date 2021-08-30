@@ -8,13 +8,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
+        <Header />
         <Switch>
           <Route path="/checkout">
-            <Header />
             <Checkout />
           </Route>
           <Route path="/">
-            <Header />
             <Home />
           </Route>
         </Switch>

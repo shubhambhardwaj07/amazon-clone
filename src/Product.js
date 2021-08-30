@@ -1,7 +1,23 @@
 import React from 'react';
 import './Product.css';
+import { useCtxValue } from './StateProvider';
 
-function Product({ title, image, rating, price, key }) {
+function Product({ id, title, image, rating, price }) {
+  const [state, dispatch] = useCtxValue();
+  const addToBasket = () => {
+    //dispatch action to context api
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      },
+    });
+  };
+
   return (
     <div className="product">
       <div className="product__info">
@@ -19,7 +35,7 @@ function Product({ title, image, rating, price, key }) {
         </div>
       </div>
       <img src={image} alt="product" />
-      <button>Add to Basket</button>
+      <button onClick={addToBasket}>Add to Basket</button>
     </div>
   );
 }
