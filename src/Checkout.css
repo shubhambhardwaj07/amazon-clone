@@ -5,6 +5,12 @@
   height: max-content;
   max-width: 1500px;
   margin: auto;
+  flex-direction: column-reverse;
+}
+@media (min-width: 992px) {
+  .checkout {
+    flex-direction: row;
+  }
 }
 
 .checkout__ad {
@@ -15,4 +21,8 @@
   margin-right: 10px;
   padding: 10px;
   border-bottom: 1px solid lightgray;
+}
+.checkout__titleOne {
+  margin-right: 10px;
+  padding: 10px;
 }

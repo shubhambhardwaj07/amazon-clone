@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #131921;
   position: sticky;
+  width: 100%;
   top: 0;
   z-index: 100;
 }
@@ -55,4 +56,44 @@
 }
 .header__basketCount {
   margin: 0 10px;
+}
+.subNav {
+  position: fixed;
+
+  z-index: 30000000000;
+  background: linear-gradient(to right, #131921, #cd9042, #131921);
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+.subNav ul {
+  display: flex;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+}
+.active {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+}
+.visible-lg {
+  display: none;
+}
+@media (min-width: 992px) {
+  .visible-lg {
+    display: flex;
+  }
 }

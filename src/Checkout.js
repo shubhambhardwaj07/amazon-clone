@@ -5,7 +5,7 @@ import { useCtxValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 
 function Checkout() {
-  const [{ basket }, dispatch] = useCtxValue();
+  const [{ basket, user }, dispatch] = useCtxValue();
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -15,6 +15,7 @@ function Checkout() {
           alt="ad"
         />
         <div>
+          <h3 className="checkout__titleOne">Hello, {user?.email}</h3>
           <h2 className="checkout__title">Your shopping Basket</h2>
           {basket?.map((item) => (
             <CheckoutProduct

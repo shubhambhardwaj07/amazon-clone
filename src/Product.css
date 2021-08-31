@@ -11,7 +11,12 @@
   background-color: white;
   z-index: 1;
 }
-
+@media (max-width: 992px) {
+  .product {
+    max-width: 400px;
+    margin: 10px auto;
+  }
+}
 .product__rating {
   display: flex;
 }
